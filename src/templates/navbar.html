@@ -1,13 +1,8 @@
 {% load notifications_tags %}
 
-<nav>   
+<nav class="navbar navbar-light bg-light">   
   {% if user.is_authenticated %}
-    <li><a title="Notifications" onclick="toggleDisplay('notifications')">
-            <svg viewBox="0 0 24 24" class="icon-xs img-responsive no-mobile">
-                <path
-                    d="M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M14,21A2,2 0 0,1 12,23A2,2 0 0,1 10,21">
-                </path>
-            </svg>
+    <li><a title="Notifications" onclick="toggleDisplay('notifications')">            
             <span class="p-l-2 only-mobile">Notifications </span> 
             <span id="notifications-count" class="badge bg-danger circle position-absolute">
                 {% live_notify_badge %}
